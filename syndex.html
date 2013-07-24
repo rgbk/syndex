@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+
+<!-- Syndex theme by Marc Kremers.  Marckremers.com, Twitter.com/marckremers ,Syndex.me -->
+<!-- Version 3.1 Released 24 July 2013 Marckremers.com/syndex/changelog/-->
+<!-- Developer? Fork us on Github! https://github.com/rgbk/syndex -->
+<!-- Help and FAQ: Syndex.me/help -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="{block:Description}{MetaDescription}{/block:Description}"/>
+<title>{Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}</title>
+
+<!-- COLOUR OPTIONS -->
+<meta name="color:BG ChatLinkQuoteText Index" content="#999999"/>
+<meta name="color:BG Description Overlay" content="#000000"/>
+<meta name="color:BG Site" content="#ffffff"/>
+<meta name="color:BG NavBar" content="#ffffff"/>
+<meta name="color:BG NavBar Button" content="#ffffff"/>
+<meta name="color:BG NavBar Button Hover" content="#e4e4e4"/>
+<meta name="color:BG Notes" content="#eeeeee"/>
+<meta name="color:BG PostInfo overlay" content="#000000"/>
+<meta name="color:BG Tag" content="#555555"/>
+<meta name="color:BG Tag Hover" content="#ffffff"/>
+<meta name="color:BG Tag Perma" content="#ffffff"/>
+<meta name="color:BG Tag Perma Hover" content="#ffffff"/>
+<meta name="color:BG Site" content="#ffffff"/>
+<meta name="color:BG Search Bar" content="#e4e4e4"/>
+<meta name="color:Text Chat name" content="#000000"/>
+<meta name="color:Text General" content="#000000"/>
+<meta name="color:Text Headline" content="#aaaaaa"/>
+<meta name="color:Text Headline Link" content="#ffffff"/>
+<meta name="color:Text Logo" content="#111111"/>
+<meta name="color:Text NavBar Link" content="#333333"/>
+<meta name="color:Text NavBar Link Hover" content="#000000"/>
+<meta name="color:Text NavBar Credit" content="#999999"/>
+<meta name="color:Text Notes Headline" content="#666666"/>
+<meta name="color:Text Notes" content="#666666"/>
+<meta name="color:Text Description Overlay" content="#ffffff"/>
+<meta name="color:Text Tag" content="#000000"/>
+<meta name="color:Text Tag Hover" content="#111111"/>
+<meta name="color:Text Tag Perma" content="#666666"/>
+<meta name="color:Text Tag Perma Hover" content="#555555"/>
+<meta name="color:Text Perma Text" content="#000000"/>
+<meta name="color:Text Perma Text Headline" content="#000000"/>
+<meta name="color:Text ChatLinkQuoteText Index" content="#ffffff"/>
+<meta name="color:Border General" content="#cccccc"/>
+<meta name="color:Border PhotoSet" content="#cccccc"/>
+<meta name="color:Border Notes" content="#e5e5e5"/>
+<meta name="color:Border Text and Chat" content="#cccccc"/>
+
+<!-- FONT OPTIONS -->
+<meta name="font:Font Chat" content="Garamond, Palatino, Georgia, Times, 'Times New Roman', serif"/>
+<meta name="font:Font Chat name" content="Garamond, Palatino, Georgia, Times, 'Times New Roman', serif"/>
+<meta name="font:Font Description" content="'Helvetica Neue', Helvetica, Arial, sans-serif"/>
+<meta name="font:Font General" content="'Helvetica Neue', Helvetica, Arial, sans-serif"/>
+<meta name="font:Font Headline" content="'Helvetica Neue', Helvetica, Arial, sans-serif"/>
+<meta name="font:Font Logo" content="'Helvetica Neue', Helvetica, Arial, sans-serif"/>
+<meta name="font:Font NavBar" content="'Helvetica Neue', Helvetica, Arial, sans-serif"/>
+<meta name="font:Font Notes" content="'Helvetica Neue', Helvetica, Arial, sans-serif"/>
+<meta name="font:Font Quote source" content="'Helvetica Neue', Helvetica, Arial, sans-serif"/>
+<meta name="font:Font Text" content="Garamond, Palatino, Georgia, Times, 'Times New Roman', serif"/>
+<meta name="font:Font TextChatLinkQuote Index" content="'Helvetica Neue', Helvetica, Arial, sans-serif"/>
+<meta name="font:Font Text and Chat Headline" content="'Helvetica Neue', Helvetica, Arial, sans-serif"/>
+
+<!-- IMAGE OPTIONS -->
+<meta name="image:LogoImage" content=""/>
+<meta name="image:BG Text Quote Chat Link" content=""/>
+<meta name="image:NavPanelBG" content=""/>
+<meta name="image:Photoset Not Loaded" content=""/>
+<meta name="image:SiteBGimage" content=""/>
+
+<!-- BOOLEAN OPTIONS -->
+<meta name="if:Anti Social" content="0"/><!-- If you don't want any permalinks, reblogging and liking switch this on -->
+<meta name="if:Infinite Scrolling" content="1"/>
+<meta name="if:Logo Opacity on Hover" content="1"/>
+<meta name="if:Logo Position Centre" content="0"/>
+<meta name="if:Masonry" content="0"/><!-- Beta phase -->
+<meta name="if:Nav Bar Open By Default" content="0"/>
+<meta name="if:RandomPostButton" content="0"/>
+<meta name="if:SiteBGimage" content="0"/>
+<meta name="if:SiteBGimageFixedPosition" content="1"/>
+<meta name="if:TweetThis" content="1"/>
+<meta name="if:No Description" content="0"/>
+<meta name="if:PhotoPermaLinkSource" content="0"/>
+
+
+<!-- OPTIONS VIA TEXT BASED INPUT -->
+<meta name="text:FontSize General" content="12px"/>
+<meta name="text:FontSize Headline" content="22px"/>
+<meta name="text:FontSize Logo Index" content="82px"/>
+<meta name="text:FontSize Logo Perma" content="18px"/>
+<meta name="text:FontSize Nav bar" content="13px"/>
+<meta name="text:FontSize Quote source" content="13px"/>
+<meta name="text:FontSize Description Overlay" content="24px"/>
+<meta name="text:FontSize TextChatLinkQuote Index" content="24px"/>
+<meta name="text:FontSize Text and Chat Headline" content="19px"/>
+<meta name="text:FontSize Text and Chat" content="19px"/>
+<meta name="text:LetterSpacing Headline" content="0"/>
+<meta name="text:LetterSpacing Logo" content="-0.04em"/>
+<meta name="text:LetterSpacing TextChatLinkQuote Index" content="0"/>
+<meta name="text:LineHeight Headline" content="25px"/>
+<meta name="text:LineHeight Logo" content="76px"/>
+<meta name="text:LineHeight Quote source" content="16px"/>
+<meta name="text:LineHeight TextChatLinkQuote Index" content="26px"/>
+<meta name="text:LineHeight Text and Chat" content="30px"/>
+<meta name="text:Italics Chat name" content="normal"/>
+<meta name="text:Italics Chat Speaker A" content="italic"/>
+<meta name="text:SmallCaps Chat name" content="small-caps"/>
+<meta name="text:Weight Chat name" content="normal"/>
+<meta name="text:Weight Chat Speaker A" content="normal"/>
+<meta name="text:Weight General" content="normal"/>
+<meta name="text:Weight Headline" content="bold"/>
+<meta name="text:Weight Logo Index" content="bold"/>
+<meta name="text:Weight Description Overlay" content="bold"/>
+<meta name="text:Weight TextChatLinkQuote Index" content="bold"/>
+<meta name="text:Weight Text Headline Perma" content="bold"/>
+<meta name="text:Weight Text and Chat" content="normal"/>
+<meta name="text:Opacity Lightbox" content="0.9"/>
+<meta name="text:Opacity PostInfo Background" content="0.92"/>
+<meta name="text:Colour LightBox R" content="255"/>
+<meta name="text:Colour LightBox G" content="255"/>
+<meta name="text:Colour LightBox B" content="255"/>
+<meta name="text:Margin Body Index" content="10px"/>
+<meta name="text:Margin between posts on Index" content="20px"/>
+<meta name="text:Margin top of Index" content="20px"/>
+<meta name="text:Padding Text Quote and Link" content="40px"/>
+<meta name="text:Position Logo Left" content="15px"/>
+<meta name="text:Position Logo Top" content="5px"/>
+<meta name="text:Size Photo H Max" content="750px"/>
+<meta name="text:Size Photoset H Max" content="650"/>
+<meta name="text:Size Photo W Max" content="900"/>
+<meta name="text:Size TextLinkChat W" content="450px"/>
+<meta name="text:Size TextLinkChat H" content="450px"/>
+<meta name="text:Size Text W Max Perma" content="800px"/>
+<meta name="text:Size Video W" content="550"/>
+<meta name="text:Rounded corners on Buttons" content="3px"/>
+<meta name="text:Rounded corners TextLinkQuoteChat" content="400px"/>
+<meta name="text:Link 1 Name" content=""/>
+<meta name="text:Link 1 URL" content=""/>
+<meta name="text:Link 2 Name" content=""/>
+<meta name="text:Link 2 URL" content=""/>
+<meta name="text:Link 3 Name" content=""/>
+<meta name="text:Link 3 URL" content=""/>
+<meta name="text:Link 4 Name" content=""/>
+<meta name="text:Link 4 URL" content=""/>
+<meta name="text:Link 5 Name" content=""/>
+<meta name="text:Link 5 URL" content=""/>
+<!-- Instant shortcuts to your favorite tags (you have to tag your posts for this to work) -->
+<meta name="text:Tag shortcut 1" content=""/>
+<meta name="text:Tag shortcut 2" content=""/>
+<meta name="text:Tag shortcut 3" content=""/>
+<meta name="text:Tag shortcut 4" content=""/>
+<meta name="text:Tag shortcut 5" content=""/>
+<meta name="text:Description Button Text" content="About"/>
+
+
+
+<!-- FAVICON, RSS, EXTERNAL CSS -->
+<link rel="shortcut icon" href="{Favicon}"/>
+<link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/bfhsl6l/Ggdmqg0ve/syndex.css" charset="utf-8"/>
+
+
+<!-- HEADER SCRIPTS -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.0.min.js"></script>
+<script type="text/javascript" src="http://static.tumblr.com/bfhsl6l/OPmmmihm5/plugins.js"></script>
+<script type="text/javascript" src="http://static.tumblr.com/bfhsl6l/avymqg0u1/syndex.js"></script>
+<script type="text/javascript" src="http://static.tumblr.com/bfhsl6l/AQjmmihml/pxuphotoset.mod.js"></script>
+<script type="text/javascript">
+{block:IfInfiniteScrolling}infiniteScroll = true;{/block:IfInfiniteScrolling}
+{block:IfNotInfiniteScrolling}infiniteScroll = false;{/block:IfNotInfiniteScrolling}
+{block:IfAntiSocial}antisocial = true;{/block:IfAntiSocial}
+{block:IfNotAntiSocial}antisocial = false;{/block:IfNotAntiSocial}
+vidWidth = {text:Size Video W};
+noartwork = "http://static.tumblr.com/bfhsl6l/LLpm29m7o/noart.png";
+function handleThis(formElm){window.location="/tagged/"+formElm.q.value+"";return false;};
+!function(d,s,id){
+    var js,fjs=d.getElementsByTagName(s)[0];
+    if(!d.getElementById(id)){
+        js=d.createElement(s);
+		js.id=id;
+		js.src="//platform.twitter.com/widgets.js";
+		fjs.parentNode.insertBefore(js,fjs);
+}}(document,"script","twitter-wjs");
+{block:IfMasonry}$('#posts').masonry({itemSelector: '.index.desktop .post',columnWidth: 100});{/block:IfMasonry}
+{block:IfNavBarOpenByDefault}navDefault = true;{/block:IfNavBarOpenByDefault}
+{block:IfNotNavBarOpenByDefault}navDefault = false;{/block:IfNotNavBarOpenByDefault}
+</script>
+
+
+<!-- SYNDEX THEME APPEARANCE OPTIONS -->
+<style type="text/css">
+body, html {
+	font:{text:Weight General} {text:FontSize General} {font:Font General}
+}
+{block:IfMasonry}.index .post {float:left;}{/block:IfMasonry}
+#background {
+	background-color: {color:BG Site};
+	{block:IfSiteBGimage}background-image: url('{image:SiteBGimage}');{/block:IfSiteBGimage}
+	{block:IfSiteBGimageFixedPosition}background-image: url('{image:SiteBGimage}');{/block:IfSiteBGimageFixedPosition}
+}
+.perma #background{z-index:-1}
+.index #posts {
+	margin: {text:Margin Body Index};
+	margin-top: {text:Margin top of Index};
+	margin-bottom: 150px !important;
+	{block:IfMasonry}text-align: center !important;{/block:IfMasonry}
+}
+/* PHOTOSET LIGHTBOX CSS */
+#tumblr_lightbox_caption {
+	font: {text:FontSize General} {font:Font General} !important;
+	color: black !important; 
+}
+#tumblr_lightbox{
+	background-color: rgba(
+		{text:Colour LightBox R},
+		{text:Colour LightBox G},
+		{text:Colour LightBox B},
+		{text:Opacity Lightbox}
+	)!important
+}
+#lightbox_background{
+	opacity:{text:Opacity Lightbox};
+	background-color: {color:BG Site}
+}
+#lightbox_image .notPhotoset{
+	cursor: s-resize;
+}
+#lightbox_image{
+	cursor: pointer;
+}
+em {font-style: italic;}
+.notes_headline_inner {width: 60%;display: block;padding: 0 20%}
+
+.icons {
+	position: absolute;
+	min-width: 35px;
+	min-height: 38px;
+	top: 114px;  
+	background-color: white;  
+	right:0;
+}
+.zoom, .post_options_more_info {
+  	min-width: 35px;
+	min-height: 38px;
+	text-align: center;
+	position: absolute;
+	color: black;
+	font-size: 22px;
+	font-weight: bold;	
+	line-height: normal;
+	top:5px;
+	
+}
+.post_options_more_info {
+	top: 9px;
+	min-height: 30px;
+	font-size: 24px;
+	background-color: white;
+
+}
+/* LOGO CSS*/
+#logo_index_text a,
+#logo_index_left a,
+.logo_permalink_page
+{
+	font-weight: {text:Weight Logo Index};
+	font-family: {font:Font Logo};
+	color: {color:Text Logo}
+}
+#logo_index_left{left:{text:Position Logo Left}}
+#logo_index_left {top:{text:Position Logo Top}}
+#logo_index_text a, 
+#logo_index_left a
+{
+	letter-spacing: {text:LetterSpacing Logo};
+	font-size: {text:FontSize Logo Index};
+	line-height: {text:LineHeight Logo}
+}
+{block:IfNotLogoOpacityonHover}
+#logo_index_text a:hover, 
+#logo_index_left a:hover{
+opacity: 1 !important}
+{/block:IfNotLogoOpacityonHover}
+.logo_permalink_page{font-size: {text:FontSize Logo Perma}}
+
+/* NAVIGATION CSS */
+#nav {
+	background-color: {color:BG NavBar};
+	background-image: url('{image:NavPanelBG}')
+}
+#nav> *, .tag_search{
+	font-family: {font:Font NavBar};
+	font-size: {text:FontSize Nav bar}
+}
+.nav_button,
+.tag_search,
+.post_info_overlay_button,
+.tagBackground,
+.next,
+.prev,
+#nav_toggle,
+.notes_tag_button,
+.notes_date_span
+{
+	-webkit-border-radius: {text:Rounded corners on Buttons};
+	-moz-border-radius: {text:Rounded corners on Buttons};
+	border-radius: {text:Rounded corners on Buttons}
+}
+.nav_button{background-color: {color:BG NavBar Button}}
+a.nav_button,
+.nav_button,
+.tag_search,
+#nav_toggle,
+.next,
+.prev,
+.back_to_top,
+.logo_permalink_page
+{color: {color:Text NavBar Link}!important}
+.nav_button:hover, #nav_toggle:hover {
+	background-color: {color:BG NavBar Button Hover};
+	color: {color:Text NavBar Link Hover}
+}
+.tag_search:focus {color: {color:Text NavBar Link Hover}}
+#nav_searchfield_background,.tag_search_hover {background-color: {color:BG Search Bar}}
+.nav_theme_credit,.nav_theme_credit a,.nav_theme_credit a:visited{color:{color:Text NavBar Credit}}
+
+/* POST INFO OVERLAY: */
+
+.post_info_overlay_background {
+	background-color: {color:BG PostInfo overlay};
+	opacity: {text:Opacity PostInfo Background}
+}
+.rounded {
+	-webkit-border-radius: {text:Rounded corners TextLinkQuoteChat};
+	-moz-border-radius: {text:Rounded corners TextLinkQuoteChat};
+	border-radius: {text:Rounded corners TextLinkQuoteChat}
+}
+.post_info_overlay_headline,
+.post_info_overlay_headline p,
+.shortened_headline,
+.shortened_headline p
+{
+	font:{text:Weight Headline} {text:FontSize Headline}/{text:LineHeight Headline} {font:Font Headline};
+	color: {color:Text Headline};
+	letter-spacing: {text:LetterSpacing Headline};
+}
+.post_info_overlay_headline, .shortened_headline {
+	margin-bottom: 20px !important
+}
+.post_info_overlay_headline a, .shortened_headline a{color: {color:Text Headline Link}}
+.post_info_overlay_headline a:hover, .shortened_headline a:hover{border-bottom: 1px solid {color:Text Headline Link}}
+.post_info_overlay_headline, .shortened_headline{
+	overflow: hidden;
+	margin-bottom: 10px !important;
+	padding-bottom: 5px;
+}
+
+/* POST OPTIONS ON HOVER */
+.post_options_more_info,
+.post_options_like,
+.post_options_reblog {
+	position: absolute;
+	width:35px;
+	height:35px;
+	cursor: pointer !important;
+	z-index: 5000;
+	float: right;
+}
+.reblog_button, .like_button{
+padding:10px 14px 10px 10px;;
+background-color: white;
+width:18px;
+height:18px;
+}
+
+.post_options_reblog {
+	top:36px;
+	right: 0
+}
+.like_toggle{display: block !important}
+.post_options_more_info {
+	background-position: -36px 0;
+	top:0;
+	right:0
+}
+.post_options_like {
+	background-position: 0 -36px;
+	top:75px;
+	right: 0;
+}
+
+/* POST INFO OVERLAY: REBLOG CREDIT AND TAGS */
+.post_info_overlay_button {
+	color: {color:Text Tag};
+	background-color: {color:BG Tag};
+	font-size: {text:FontSize Nav bar}
+}
+.post_info_overlay_button:hover{
+	color: {color:Text Tag Hover};
+	background-color: {color:BG Tag Hover}
+}
+
+/* AUDIO POST */
+.post_audio, .post_audio_player, .audioPlayerWrap, .audioArt{background-color:#e4e4e4}
+.post_audio_info, .post_audio_info a{color:#444444}
+.post_audio_no_art {background-image: url("{image:Audio No Artwork}")}
+.audio> .post_info_overlay_headline span p {font-size: {text:FontSize General};}
+.audio> .shortened_headline span p {font-size: {text:FontSize General};}
+.post_audio_table{border-top:1px {color:BG Site} solid;}
+.post_audio_info{border-left:1px {color:BG Site} solid;}
+
+/*PHOTOSET POST CSS (THIS CREATES THE STEPPED FRAME AROUND THE EDGE OF THE POST)*/
+.index .type_photoset { 
+	-webkit-box-shadow:
+		1px 1px 0 0 {color:Border PhotoSet},
+		2px 2px 0 0 {color:BG Site},
+		3px 3px 0 0 {color:Border PhotoSet},
+		4px 4px 0 0 {color:BG Site},
+		5px 5px 0 0 {color:Border PhotoSet},
+		6px 6px 0 0 {color:BG Site},
+		7px 7px 0 0 {color:Border PhotoSet};
+	-moz-box-shadow:
+		1px 1px 0 0 {color:Border PhotoSet},
+		2px 2px 0 0 {color:BG Site},
+		3px 3px 0 0 {color:Border PhotoSet},
+		4px 4px 0 0 {color:BG Site},
+		5px 5px 0 0 {color:Border PhotoSet},
+		6px 6px 0 0 {color:BG Site},
+		7px 7px 0 0 {color:Border PhotoSet};
+	box-shadow:
+		1px 1px 0 0 {color:Border PhotoSet},
+		2px 2px 0 0 {color:BG Site},
+		3px 3px 0 0 {color:Border PhotoSet},
+		4px 4px 0 0 {color:BG Site},
+		5px 5px 0 0 {color:Border PhotoSet},
+		6px 6px 0 0 {color:BG Site},
+		7px 7px 0 0 {color:Border PhotoSet};
+	background-color: {color:Border PhotoSet};
+	{block:IfPhotosetNotLoadedImage}background-image: url("{image:Photoset Not Loaded}");{/block:IfPhotosetNotLoadedImage}
+	background-position:center; 
+}
+
+/*QUOTE POST CSS*/
+.post_quote{
+	font-weight: {text:Weight TextChatLinkQuote Index};
+	line-height: {text:LineHeight TextChatLinkQuote Index};
+	font-size: {text:FontSize TextChatLinkQuote Index};
+	color: {color:Text Perma Text};
+	letter-spacing: {text:LetterSpacing TextChatLinkQuote Index};
+	width: {text:Size Text W Max Perma};
+}
+.post_quote a, .post_quote a:visited,.post_quote_source a, .post_quote_source a:visited{color: {color:Text ChatLinkQuoteText Index}}
+.post_quote_source{
+	font:{text:Weight Quote source} {text:FontSize Quote source}/{text:LineHeight Quote source} {font:Font Quote source}; 
+	color: {color:Text ChatLinkQuoteText Index};
+}
+.index .post_quote_source{
+	position:absolute;
+	bottom: 30px;
+	left:25%;
+	width: 50%;
+	-webkit-border-bottom-right-radius: {text:Rounded corners TextLinkQuoteChat};
+	-webkit-border-bottom-left-radius: {text:Rounded corners TextLinkQuoteChat};
+	-moz-border-radius-bottomright: {text:Rounded corners TextLinkQuoteChat};
+	-moz-border-radius-bottomleft: {text:Rounded corners TextLinkQuoteChat};
+	border-bottom-right-radius: {text:Rounded corners TextLinkQuoteChat};
+	border-bottom-left-radius: {text:Rounded corners TextLinkQuoteChat};
+	opacity: 0.4;
+}
+.post_quote_body,.post_quote_body a, .post_quote_body a:visited{
+	font:{text:Weight Text Headline Perma} {text:FontSize TextChatLinkQuote Index}/{text:LineHeight TextChatLinkQuote Index} {font:Font Text and Chat Headline}; 
+	color: {color:Text Perma Text Headline}
+}
+.perma .post_quote_source, .perma .post_quote_source a:visited,.perma .post_quote_source a{
+	font:{text:Weight Quote source} {text:FontSize Quote source}/{text:LineHeight Quote source} {font:Font Quote source} !important; 
+	color: {color:Text Perma Text};
+}
+.perma .post_quote_source a:visited,.perma .post_quote_source a{
+	border-bottom: 1px dotted {color:Text Perma Text}
+}
+.perma .post_quote_body, .perma .post_quote_inner,.perma .post_quote_body a, .perma .post_quote_inner a, .perma .post_quote_body a:visited, .perma .post_quote_inner a:visited{color:{color:Text Perma Text}}
+.perma .post_quote_source{opacity: 0.4}
+/*TEXT, QUOTE AND LINK POST CSS*/
+.index .post {margin:{text:Margin between posts on Index}}
+.post_text{
+	font-weight:{text:Weight TextChatLinkQuote Index};
+	font-size:{text:FontSize TextChatLinkQuote Index};
+	line-height:{text:LineHeight TextChatLinkQuote Index};
+	font-family: {font:Font TextChatLinkQuote Index};
+	letter-spacing: {text:LetterSpacing TextChatLinkQuote Index};
+	color: {color:Text ChatLinkQuoteText Index};
+	background-color: {color:BG ChatLinkQuoteText Index};
+	/* background-image: url("{image:BG Text Quote Chat Link}"); */
+	-webkit-border-radius: {text:Rounded corners TextLinkQuoteChat};
+	-moz-border-radius: {text:Rounded corners TextLinkQuoteChat};
+	border-radius: {text:Rounded corners TextLinkQuoteChat};
+	width:{text:Size TextLinkChat W};
+	height:{text:Size TextLinkChat H};
+}
+.post_text_table_cell{padding: {text:Padding Text Quote and Link}}
+.post_info_overlay_headline{padding: 0 {text:Padding Text Quote and Link}}
+.shortened_headline{padding: 0 {text:Padding Text Quote and Link}}
+.post_text_body{
+	color:{color:Text ChatLinkQuoteText Index};
+}
+.post_text_body a,.index .post_text_body a:visited{color: {color:Text ChatLinkQuoteText Index}}
+.post_perma_inner a:visited,.post_perma_inner a{color: {color:post_text Index}}
+.post_text_title_perma{
+	font:{text:Weight Text Headline Perma} {text:FontSize Text and Chat Headline} {font:Font Text and Chat Headline}; 
+	color: {color:Text Perma Text Headline}
+}
+.soundcloud_audio_player{height:165px !important}
+.post_perma_inner{max-width:{text:Size Text W Max Perma};}
+.post_perma_inner blockquote{border-left: 1px solid {color:Text Perma Text};}
+.post_perma_inner a, .post_perma_inner a:visited{color: {color:Text Perma Text} !important;}
+#post_text_body_perma, #chat_body_post_perma{
+	border-top: 1px solid {color:Border Text and Chat};
+	font-weight: {text:Weight Text and Chat};
+	font-size: {text:FontSize Text and Chat};
+	line-height: {text:LineHeight Text and Chat};
+	font-family: {font:Font Text};
+	border-bottom: 1px solid {color:Border Text and Chat} !important;
+	padding-bottom: {text:LineHeight Text and Chat};
+	color: {color:Text Perma Text}
+}
+#chat_body_post_perma{font-family:{font:Font Chat}}
+#post_text_body_perma{font-family:{font:Font Text}}
+
+/*CHAT POST (USES TEXT POST CSS AS BASE)*/
+/* Names of the speakers */
+li span.label{ 
+	color:{color:Text Chat name};
+	font-weight: {text:Weight Chat name};
+	font-style: {text:Italics Chat name};
+	font-variant:{text:SmallCaps Chat name};
+	font-family: {font:Font Chat name}
+}
+.chat_person_1{
+	font-style: {text:Italics Chat Speaker A};
+	font-weight:{text:Weight Chat Speaker A};
+	padding-top: {text:LineHeight Text and Chat}
+}
+
+/*PERMALINK PAGE AND NOTES CSS*/
+ol:last-child{background-color: {color:BG Notes}}
+.note,.notes_headline,.notes_date, .notes_tag {
+	border-top: solid 1px {color:Border Notes};
+	color: {color:Text Notes};
+	font-family: {font:Font Notes};
+	background-color: {color:BG Notes}
+}
+.more_notes_link_container a, .more_notes_link_container a:visited{color: {color:Text Notes} !important}
+.more_notes_link_container a:hover{text-decoration: underline}
+.note .action a,.action a:visited, .perma blockquote a, .perma blockquote a:visited {color: {color:Text Notes} !important}
+.notes_tag_button, .notes_tag_title_case a:visited,.action a:visited, .notes_date_span {
+	color: {color:Text Tag Perma} !important;
+	background-color: {color:BG Tag Perma};
+}
+.notes_tag_button:hover, .action a:hover{
+	color: {color:Text Tag Perma Hover} !important;
+	background-color: {color:BG Tag Perma Hover};
+}
+.notes_headline_inner, .notes_headline_inner a, .notes_headline_inner a:visited{
+	color: {color:Text Notes Headline};	
+	font: {text:Weight Headline} {text:FontSize Headline}/{text:LineHeight Headline} {font:Font Headline}
+}
+.notes_headline_inner a, .notes_headline_inner a:visited{border-bottom: 1px solid {color:Text Notes Headline};}
+
+/*IMAGE SIZING CSS*/
+.index .not_audio img{
+	max-height:{text:Size Photo H Max} !important; 
+	max-width:{text:Size Photo W Max} !important
+}
+#post_text_body_perma .not_audio img {max-width:{text:Size Text W Max Perma}; height: auto !important;max-height: auto !important;}
+
+/*Description Overlay*/
+.description_overlay{
+font-family: {font:Font Description};
+font-size: {text:FontSize Description Overlay};
+font-weight: {text:Weight Description Overlay};
+background-color: {color:BG Description Overlay};
+color: {color:Text Description Overlay}
+}
+.next.nav_button{margin-bottom: 3px;!important}
+{block:IfNotSiteBGimage}
+.index #background{
+background: -moz-linear-gradient(top,rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%); 
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.05)));
+background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%); 
+background: -o-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%); 
+background: -ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+background: linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#0d000000',GradientType=0 );
+}
+{/block:IfNotSiteBGimage}
+/*CUSTOM CSS */
+{CustomCSS}
+</style>
+</head>
+<body class="infscroll{block:PermalinkPage} perma{/block:PermalinkPage}{block:IndexPage} index{/block:IndexPage}" id="top">
+
+<!-- LIGHTBOX FOR PHOTO POSTS-->
+<div id="lightbox"><div id="lightbox_absolute_positioning"><div id="lightbox_table"><div id="lightbox_image"></div></div></div><div id="lightbox_background"></div></div>
+
+<!-- FULL SCREEN "DESCRIPTION" OVERLAY -->
+<div class="description_overlay_wrapper"><div class="description_overlay"><div class="description_overlay_inner"><img src="{PortraitURL-128}" width="128" height="128" title="{Title}" alt="{Title}"/><br>{block:Description}{Description}{/block:Description}</div></div></div>
+
+{block:IndexPage}
+
+<!-- LOGO CENTRE SCREEN -->
+{block:IfLogoPositionCentre}<div id="logo_index"><div id="logo_index_text">{block:IfNotLogoImageImage}
+<a href="/">{Title}</a>
+{/block:IfNotLogoImageImage}{block:IfLogoImageImage}<a href="/"><img src="{image:LogoImage}" alt="logo" /></a>{/block:IfLogoImageImage}</div></div>{/block:IfLogoPositionCentre}
+
+<!-- LOGO LEFT SCREEN -->
+{block:IfNotLogoPositionCentre}<div id="logo_index_left">{block:IfNotLogoImageImage}<a href="/">{Title}</a>{/block:IfNotLogoImageImage}
+{block:IfLogoImageImage}<a href="/"><img src="{image:LogoImage}" alt="logo" /></a>{/block:IfLogoImageImage}</div>{/block:IfNotLogoPositionCentre}
+
+<!-- BACK TO TOP ONLY ON INDEX -->
+<div id="pagination_index"><div id="back_to_top_wrapper"><div class="nav_button_spacer"></div><div class="back_to_top">▲</div></div></div>
+
+<!-- NAVBAR OPEN/CLOSE -->
+<div id="nav_toggle_wrapper"><div id="nav_toggle"><div id="navSwitch">✕</div></div><div class="nav_button_spacer"></div><form onsubmit="return handleThis(this)"><input class="tag_search" type="text" name="q" value="/{block:TagPage}{Tag}{/block:TagPage}"/></form></div>
+
+<!-- NAVBAR -->
+<div id="nav"><div id="nav_table"><div class="nav_button_spacer"></div><div class="nav_button" id="nav_searchfield_background"></div><div class="nav_button_spacer"></div><div class="nav_button_spacer"></div>
+
+<!-- To personalise the tweet share button add after the class attribute: data-via="YOUR_USER_NAME_WITHOUT_THE_@" data-hashtags="A_HASHTAG_WITHOUT_THE_#" -->
+
+{block:IfTweetThis}<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>{/block:IfTweetThis}
+<a class="nav_button" href="/archive">Archive</a>
+{block:IfNotNoDescription}<div class="nav_button_spacer"></div><a class="nav_button nav_button_description">{text:Description Button Text}</a>{/block:IfNotNoDescription}
+{block:IfRandomPostButton}<div class="nav_button_spacer"></div><a class="nav_button" href="/random">Random</a>{/block:IfRandomPostButton}
+{block:AskEnabled}<div class="nav_button_spacer"></div><a class="nav_button" href="/ask">{AskLabel}</a>{/block:AskEnabled}
+{block:SubmissionsEnabled}<div class="nav_button_spacer"></div><a class="nav_button" href="/submit">{SubmitLabel}</a>{/block:SubmissionsEnabled}
+{block:IfLink1URL}<div class="nav_button_spacer"></div><a class="nav_button" href="{text:Link 1 URL}">{text:Link 1 Name}</a>{/block:IfLink1URL}
+{block:IfLink2URL}<div class="nav_button_spacer"></div><a class="nav_button" href="{text:Link 2 URL}">{text:Link 2 Name}</a>{/block:IfLink2URL}
+{block:IfLink3URL}<div class="nav_button_spacer"></div><a class="nav_button" href="{text:Link 3 URL}">{text:Link 3 Name}</a>{/block:IfLink3URL}
+{block:IfLink4URL}<div class="nav_button_spacer"></div><a class="nav_button" href="{text:Link 4 URL}">{text:Link 4 Name}</a>{/block:IfLink4URL}
+{block:IfLink5URL}<div class="nav_button_spacer"></div><a class="nav_button" href="{text:Link 5 URL}">{text:Link 5 Name}</a>{/block:IfLink5URL}
+{block:IfTagshortcut1}<div class="nav_button_spacer"></div><a class="nav_button" href="/tagged/{text:Tag shortcut 1}">{text:Tag shortcut 1}</a>{/block:IfTagshortcut1}
+{block:IfTagshortcut2}<div class="nav_button_spacer"></div><a class="nav_button" href="/tagged/{text:Tag shortcut 2}">{text:Tag shortcut 2}</a>{/block:IfTagshortcut2}
+{block:IfTagshortcut3}<div class="nav_button_spacer"></div><a class="nav_button" href="/tagged/{text:Tag shortcut 3}">{text:Tag shortcut 3}</a>{/block:IfTagshortcut3}
+{block:IfTagshortcut4}<div class="nav_button_spacer"></div><a class="nav_button" href="/tagged/{text:Tag shortcut 4}">{text:Tag shortcut 4}</a>{/block:IfTagshortcut4}
+{block:IfTagshortcut5}<div class="nav_button_spacer"></div><a class="nav_button" href="/tagged/{text:Tag shortcut 5}">{text:Tag shortcut 5}</a>{/block:IfTagshortcut5}
+{block:HasPages}
+{block:Pages}<div class="nav_button_spacer"></div><a class="nav_button" href="{URL}">{Label}</a>{/block:Pages}
+{/block:HasPages}
+<div class="nav_button_spacer"></div><div class="nav_theme_credit"><a href="http://www.tumblr.com/theme/34366">Syndex Theme</a> by <a href="https://twitter.com/#!/marckremers">Marc</a> <a href="http://marckremers.com">Kremers</a></div>
+
+{block:Pagination} 
+<!-- N.B. If Infinite scrolling is turned off (i.e. iPad) -->
+<div class="nav_button_spacer"></div><div id="infinite_scroll">
+{block:PreviousPage}<a href="{PreviousPage}" class="prev nav_button" title="{lang:Newer posts}">←</a><div class="nav_button_spacer"></div>{/block:PreviousPage}
+{block:NextPage}<a href="{NextPage}" class="next nav_button" title="{lang:Older posts}">→</a>{/block:NextPage}</div>
+{/block:Pagination}
+
+</div></div>
+{/block:IndexPage}
+
+
+<div id="posts">
+<div id="background"></div>
+
+{block:Posts}
+{block:IndexPage}
+
+{block:Answer}
+<div class="post type_text" id="post-{PostID}"><div class="post_margin_adjustment"><div class="post_relative"><div class="post_options"><div title="Reblog, Like, {lang:Source} and {lang:Tags}" class="post_options_more_info">+</div><div class="post_options_reblog">{ReblogButton color="black" size="18"}</div><div class="type_like post_options_like">{LikeButton color="black" size="18"}</div><a href="{Permalink}" class="post_options_permalink"></a></div><div class="post_info_overlay"><div class="post_info_overlay_absolute"><div class="post_info_overlay_table"><div class="post_info_overlay_cell"><div class="post_info_overlay_tags"><div class="post_info_overlay_tags_inline_nest"><a class="post_info_overlay_button" href="{Permalink}">Permalink {block:NoteCount}({NoteCountWithLabel}){/block:NoteCount}</a>{block:ContentSource}<a class="post_info_overlay_button" href="{SourceURL}">Source: {SourceTitle}</a>{/block:ContentSource}{block:RebloggedFrom}<a class="post_info_overlay_button" href="{ReblogParentURL}">Via: {ReblogParentName}</a>{/block:RebloggedFrom}{block:HasTags}{block:Tags}<a href="{TagURL}"><div class="post_info_overlay_button">{Tag}</div></a>{/block:Tags}{/block:HasTags}</div></div></div></div></div><div class="rounded post_info_overlay_background"></div></div><div class="post_text"><div class="post_text_table_cell"><div class="post_text_body title_text"><a href="{Permalink}">Q: {Question}</a></div><div class="post_quote_source">Asked by {Asker}</div></div></div></div></div></div>
+{/block:Answer}
+
+
+{block:Audio}
+<div class="post type_audio" id="post-{PostID}">
+	<div class="post_margin_adjustment">
+		<div class="post_relative" title="{block:TrackName}'{TrackName}' - {/block:TrackName}{block:Album}{Album} - {/block:Album}{block:Artist}{Artist}{/block:Artist}">
+			<div class="post_options"><div class="post_options_more_info" title="Reblog, Like, {lang:Source} and {lang:Tags}"></div>
+			<div class="post_options_reblog">{ReblogButton color="black" size="18"}</div>
+			<div class="type_like post_options_like">{LikeButton color="black" size="18"}</div>
+			<a href="{Permalink}" class="post_options_permalink"></a>
+		</div>
+	<div class="post_info_overlay">
+		<div class="post_info_overlay_absolute">
+			<div class="post_info_overlay_table">
+				<div class="post_info_overlay_cell">
+					<div class="post_info_overlay_headline">
+						<p>{block:TrackName}"{TrackName}" - {/block:TrackName}{block:Album}{Album} - {/block:Album}{block:Artist}{Artist}{/block:Artist}</p>
+						{block:Caption}{Caption}{/block:Caption}
+					</div>
+					<div class="post_info_overlay_tags">
+						<div class="post_info_overlay_tags_inline_nest">
+							<a class="post_info_overlay_button" href="{Permalink}">Permalink {block:NoteCount}({NoteCountWithLabel}) {/block:NoteCount}</a>
+							{block:ContentSource}<a class="post_info_overlay_button" href="{SourceURL}">Source: {SourceTitle}</a>{/block:ContentSource}
+							{block:RebloggedFrom}<a class="post_info_overlay_button" href="{ReblogParentURL}">Via: {ReblogParentName}</a>{/block:RebloggedFrom}
+							{block:HasTags}{block:Tags}<a href="{TagURL}">
+								<div class="post_info_overlay_button">{Tag}</div>
+							</a>{/block:Tags}{/block:HasTags}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="post_info_overlay_background"></div>
+	</div>
+	<div class="post_audio">
+		<div class="post_audio_art_table_cell">
+			<div class="post_audio_no_art_wrap">
+				<div class="post_audio_no_art init">
+					{block:AlbumArt}<img class="notPhotoset" src="{AlbumArtURL}" alt="Album Art"/>{/block:AlbumArt}
+				</div>
+			</div>
+		</div>
+		<div class="post_audio_table">
+			<div class="post_audio_player">
+				<div class="post_audio_player_ui">{AudioPlayerGrey}</div>
+				<div class="js-string hidden">{JSAudioPlayerGrey}</div>
+				<div class="post_audio_info">{PlayCountWithLabel}&nbsp;{block:ContentSource}<a href="{SourceURL}" target="_blank">Source</a>{/block:ContentSource}{block:ExternalAudio} - <a href="{ExternalAudioURL}" target="_blank">Download</a>{/block:ExternalAudio}
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+{/block:Audio}
+
+{block:Chat}
+<div class="post type_text" id="post-{PostID}"><div class="post_margin_adjustment"><div class="post_relative"><div class="post_options"><div title="Reblog, Like, {lang:Source} and {lang:Tags}" class="post_options_more_info">+</div><div class="post_options_reblog">{ReblogButton color="black" size="18"}</div><div class="type_like post_options_like">{LikeButton color="black" size="18"}</div><a href="{Permalink}" class="post_options_permalink"></a></div><div class="post_info_overlay"><div class="post_info_overlay_absolute"><div class="post_info_overlay_table"><div class="post_info_overlay_cell"><div class="post_info_overlay_tags"><div class="post_info_overlay_tags_inline_nest"><a class="post_info_overlay_button" href="{Permalink}">Permalink {block:NoteCount}({NoteCountWithLabel}){/block:NoteCount}</a>{block:ContentSource}<a class="post_info_overlay_button" href="{SourceURL}">Source: {SourceTitle}</a>{/block:ContentSource}{block:RebloggedFrom}<a class="post_info_overlay_button" href="{ReblogParentURL}">Via: {ReblogParentName}</a>{/block:RebloggedFrom}{block:HasTags}{block:Tags}<a href="{TagURL}"><div class="post_info_overlay_button">{Tag}</div></a>{/block:Tags}{/block:HasTags}</div></div></div></div></div><div class="rounded post_info_overlay_background"></div></div><div class="post_text"><div class="post_text_table_cell"><div class="post_text_body title_chat"><a href="{Permalink}" title="{lang:Continue reading} {lang:Chat}">{block:Title}{Title}{/block:Title}</a></div></div></div></div></div></div>
+{block:Chat}
+
+{block:Link}
+<div class="post type_text" id="post-{PostID}"><div class="post_margin_adjustment"><div title="{URL} - {block:Description}{PlaintextDescription}{/block:Description}" class="post_relative"><div class="post_options"><div class="post_options_more_info" title="Reblog, Like, {lang:Source} and {lang:Tags}"></div><div class="post_options_reblog">{ReblogButton color="black" size="18"}</div><div class="type_like post_options_like">{LikeButton color="black" size="18"}</div><a href="{Permalink}" class="post_options_permalink"></a></div><div class="post_info_overlay"><div class="post_info_overlay_absolute"><div class="post_info_overlay_table"><div class="post_info_overlay_cell"><div class="post_info_overlay_tags"><div class="post_info_overlay_tags_inline_nest"><a class="post_info_overlay_button" href="{Permalink}">Permalink {block:NoteCount}({NoteCountWithLabel}){/block:NoteCount}</a>{block:ContentSource}<a class="post_info_overlay_button" href="{SourceURL}">Source: {SourceTitle}</a>{/block:ContentSource}{block:RebloggedFrom}<a class="post_info_overlay_button" href="{ReblogParentURL}">Via: {ReblogParentName}</a>{/block:RebloggedFrom}{block:HasTags}{block:Tags}<a href="{TagURL}"><div class="post_info_overlay_button">{Tag}</div></a>{/block:Tags}{/block:HasTags}</div></div></div></div></div><div class="rounded post_info_overlay_background"></div></div><div class="post_text"><div class="post_text_table_cell"><div class="post_text_body title_text"><a title="{URL} - {block:Description}{PlaintextDescription}{/block:Description}" href="{URL}" {Target}>{Name}</a></div></div></div></div></div></div>
+{/block:Link}
+
+{block:Photo}
+<div class="post not_audio photopost" id="post-{PostID}"><div class="post_margin_adjustment"><div class="post_relative"><div class="post_options"><div title="Reblog, Like, {lang:Source} and {lang:Tags}" class="post_options_more_info">+</div><div class="post_options_reblog">{ReblogButton color="black" size="18"}</div><div class="type_like post_options_like">{LikeButton color="black" size="18"}</div><a href="{Permalink}" class="post_options_permalink"></a></div><div class="post_info_overlay"><div class="post_info_overlay_absolute"><div class="post_info_overlay_table"><div class="post_info_overlay_cell"><div class="post_info_overlay_headline">{block:Caption}{Caption}{/block:Caption}</div><div class="post_info_overlay_tags"><div class="post_info_overlay_tags_inline_nest"><a class="post_info_overlay_button" href="{Permalink}">Permalink {block:NoteCount}({NoteCountWithLabel}){/block:NoteCount}</a>{block:ContentSource}<a class="post_info_overlay_button" href="{SourceURL}">Source: {SourceTitle}</a>{/block:ContentSource}{block:RebloggedFrom}<a class="post_info_overlay_button" href="{ReblogParentURL}">Via: {ReblogParentName}</a>{/block:RebloggedFrom}{block:HasTags}{block:Tags}<a href="{TagURL}"><div class="post_info_overlay_button">{Tag}</div></a>{/block:Tags}{/block:HasTags}</div></div></div></div></div><div class="post_info_overlay_background"></div></div>{block:IfPhotoPermaLinkSource}<a href="{Permalink}"><img class="notPhotoset" src="{PhotoURL-HighRes}" alt="{PhotoAlt}" title="{block:ContentSource}Source: {SourceTitle}{/block:ContentSource}"/></a>{/block:IfPhotoPermaLinkSource}{block:IfNotPhotoPermaLinkSource}<img class="notPhotoset" src="{PhotoURL-HighRes}" alt="{PhotoAlt}" title="{block:ContentSource}Source: {SourceTitle}{/block:ContentSource}"/>{/block:IfNotPhotoPermaLinkSource}<input type="hidden" name="hiresImg" value="{PhotoURL-HighRes}"/></div></div></div>
+{/block:Photo}
+
+
+
+
+{block:Photoset}
+<div class="post" id="post-{PostID}">
+	<div class="post_margin_adjustment">
+		<div class="post_relative type_photoset" >
+			<div class="post_options">
+				<div title="Reblog, Like, {lang:Source} and {lang:Tags}" class="post_options_more_info pset2">+</div>
+				<div class="post_options_reblog">{ReblogButton color="black" size="18"}</div>
+				<div class="type_like post_options_like">{LikeButton color="black" size="18"}</div>
+			    <div class="icons"><a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"><div class="zoom">{PhotoCount}</div></a></div>
+			    <a href="{Permalink}" class="post_options_permalink"></a>
+			</div>
+			<div class="post_info_overlay">
+				<div class="post_info_overlay_absolute">
+					<div class="post_info_overlay_table">
+						<div class="post_info_overlay_cell">
+							<div class="post_info_overlay_headline">{block:Caption}{Caption}{/block:Caption}</div>
+							<div class="post_info_overlay_tags">
+								<div class="post_info_overlay_tags_inline_nest">
+									<a class="post_info_overlay_button" href="{Permalink}">Permalink {block:NoteCount}({NoteCountWithLabel}){/block:NoteCount}</a>
+									{block:ContentSource}<a class="post_info_overlay_button" href="{SourceURL}">Source: {SourceTitle}</a>{/block:ContentSource}
+									{block:RebloggedFrom}<a class="post_info_overlay_button" href="{ReblogParentURL}">Via: {ReblogParentName}</a>{/block:RebloggedFrom}
+									{block:HasTags}{block:Tags}<a href="{TagURL}">
+										<div class="post_info_overlay_button">{Tag}</div>
+									</a>{/block:Tags}{/block:HasTags}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="post_info_overlay_background"></div>
+			</div>
+		<div class="photo-slideshow" id="photoset_{PostID}" data-layout="1">{block:Photos}
+			<div class="photo-data">
+      			<div class="pxu-photo">
+        			<img alt="{PhotoAlt}" src="{PhotoURL-HighRes}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" style="width:auto; max-height:{text:Size Photoset H Max}px" class="pset" {block:Caption}data-caption="{Caption}"{/block:Caption}>
+      			</div>
+   			</div>{/block:Photos}
+		</div>
+	</div>
+</div>
+</div>
+{/block:Photoset}
+
+
+{block:Quote}
+<div class="post type_text" id="post-{PostID}"><div class="post_margin_adjustment"><div class="post_relative"><div class="post_options"><div title="Reblog, Like, {lang:Source} and {lang:Tags}" class="post_options_more_info">+</div><div class="post_options_reblog">{ReblogButton color="black" size="18"}</div><div class="type_like post_options_like">{LikeButton color="black" size="18"}</div><a href="{Permalink}" class="post_options_permalink"></a></div><div class="post_info_overlay"><div class="post_info_overlay_absolute"><div class="post_info_overlay_table"><div class="post_info_overlay_cell"><div class="post_info_overlay_tags"><div class="post_info_overlay_tags_inline_nest"><a class="post_info_overlay_button" href="{Permalink}">Permalink {block:NoteCount}({NoteCountWithLabel}){/block:NoteCount}</a>{block:ContentSource}<a class="post_info_overlay_button" href="{SourceURL}">Source: {SourceTitle}</a>{/block:ContentSource}{block:RebloggedFrom}<a class="post_info_overlay_button" href="{ReblogParentURL}">Via: {ReblogParentName}</a>{/block:RebloggedFrom}{block:HasTags}{block:Tags}<a href="{TagURL}"><div class="post_info_overlay_button">{Tag}</div></a>{/block:Tags}{/block:HasTags}</div></div></div></div></div><div class="rounded post_info_overlay_background"></div></div><div class="post_text"><div class="post_text_table_cell"><div class="post_text_body title_quote"><a href="{Permalink}">"{Quote}"</a></div>{block:Source}<div class="post_quote_source">{Source}</div>{/block:Source}</div></div></div></div></div>
+{/block:Quote}
+
+
+{block:Text}<div class="post type_text" id="post-{PostID}"><div class="post_margin_adjustment"><div class="post_relative"><div class="post_options"><div title="Reblog, Like, {lang:Source} and {lang:Tags}" class="post_options_more_info">+</div><div class="post_options_reblog">{ReblogButton color="black" size="18"}</div><div class="type_like post_options_like">{LikeButton color="black" size="18"}</div><a href="{Permalink}" class="post_options_permalink"></a></div><div class="post_info_overlay"><div class="post_info_overlay_absolute"><div class="post_info_overlay_table"><div class="post_info_overlay_cell"><div class="post_info_overlay_tags"><div class="post_info_overlay_tags_inline_nest"><a class="post_info_overlay_button" href="{Permalink}">Permalink {block:NoteCount}({NoteCountWithLabel}){/block:NoteCount}</a>{block:ContentSource}<a class="post_info_overlay_button" href="{SourceURL}">Source: {SourceTitle}</a>{/block:ContentSource}{block:RebloggedFrom}<a class="post_info_overlay_button" href="{ReblogParentURL}">Via: {ReblogParentName}</a>{/block:RebloggedFrom}{block:HasTags}{block:Tags}<a href="{TagURL}"><div class="post_info_overlay_button">{Tag}</div></a>{/block:Tags}{/block:HasTags}</div></div></div></div></div><div class="rounded post_info_overlay_background"></div></div><div class="post_text"><div class="post_text_table_cell"><div class="post_text_body title_text"><a href="{Permalink}">{block:Title}{Title}{/block:Title}</a></div></div></div></div></div></div>
+{/block:Text}
+
+{block:Video}
+<div class="post type_video" id="post-{PostID}"><div class="post_margin_adjustment"><div class="post_relative"><div class="post_options"><div title="Reblog, Like, {lang:Source} and {lang:Tags}" class="post_options_more_info">+</div><div class="post_options_reblog">{ReblogButton color="black" size="18"}</div><div class="type_like post_options_like">{LikeButton color="black" size="18"}</div><a href="{Permalink}" class="post_options_permalink"></a></div><div class="post_info_overlay"><div class="post_info_overlay_absolute"><div class="post_info_overlay_table"><div class="post_info_overlay_cell"><div class="post_info_overlay_headline">{block:Caption}{Caption}{/block:Caption}</div><div class="post_info_overlay_tags"><div class="post_info_overlay_tags_inline_nest"><a class="post_info_overlay_button" href="{Permalink}">Permalink {block:NoteCount}({NoteCountWithLabel}){/block:NoteCount}</a>{block:ContentSource}<a class="post_info_overlay_button" href="{SourceURL}">Source: {SourceTitle}</a>{/block:ContentSource}{block:RebloggedFrom}<a class="post_info_overlay_button" href="{ReblogParentURL}">Via: {ReblogParentName}</a>{/block:RebloggedFrom}{block:HasTags}{block:Tags}<a href="{TagURL}"><div class="post_info_overlay_button">{Tag}</div></a>{/block:Tags}{/block:HasTags}</div></div></div></div></div><div class="post_info_overlay_background"></div></div><div class="media">{Video-500}<div class="js-string hidden">{JSVideo-500}</div></div></div></div></div>
+{/block:Video}
+
+{/block:IndexPage}
+
+
+{block:PermalinkPage}
+
+{block:Answer}
+<div class="post_text_perma not_audio" id="post-{PostID}"><div class="post_perma_inner"><div class="post_table_cell_perma"><div class="post_text_title_perma">{Asker}&nbsp;-&nbsp;{Question}</div><div id="post_text_body_perma" class="not_audio">{Answer}</div></div></div></div>
+{/block:Answer}
+
+{block:Audio}
+<div id="post_permalink"><div class="post type_audio" id="post-{PostID}"><div id="post_permalink_inner"><div class="post_relative"><div class="post_audio"><div class="post_audio_art_table_cell"><div class="post_audio_no_art_wrap"><div class="post_audio_no_art init">{block:AlbumArt}<img class="notPhotoset" src="{AlbumArtURL}" alt="Album Art"/>{/block:AlbumArt}</div></div></div><div class="post_audio_table"><div class="post_audio_player"><div class="post_audio_player_ui">{AudioPlayerGrey}</div><div class="post_audio_info">{PlayCountWithLabel}{block:ContentSource}&nbsp;-&nbsp;<a href="{SourceURL}" target="_blank">Source</a>{/block:ContentSource}{block:ExternalAudio}&nbsp;-&nbsp;<a href="{ExternalAudioURL}" target="_blank">Download</a>{/block:ExternalAudio}</div></div></div></div></div></div></div></div>
+{/block:Audio}
+
+{block:Chat}
+<div class="post_text_perma" id="post-{PostID}"><div class="post_perma_inner"><div class="post_table_cell_perma">{block:Title}<div class="post_text_title_perma">{Title}</div>{/block:Title}<div id="chat_body_post_perma"><ul class="chat">{block:Lines}<li class="{Alt} chat_person_{UserNumber}">{block:Label}<span class="label">{Label}&nbsp;</span>{/block:Label}&nbsp;{Line}</li>{/block:Lines}</ul></div></div></div></div>
+{/block:Chat}
+
+{block:Link}
+<div id="post_permalink"><div class="post" id="post-{PostID}"><div id="post_permalink_inner"><div class="post_relative"><div class="post_quote"><div class="post_quote_inner"><div class="post_quote_body"><a href="{URL}" {Target}>{Name}</a></div>{block:Description}<div class="post_quote_source">{Description}</div>{/block:Description}</div></div></div></div></div></div>
+{/block:Link}
+
+{block:Photo}<div id="post_permalink"><div class="post not_audio" id="post-{PostID}"><div id="post_permalink_inner">{block:IfPhotoPermaLinkSource}<a href="{block:ContentSource}{SourceURL}{/block:ContentSource}" {block:ContentSource}title="Visit source: {SourceTitle}"{/block:ContentSource}>{/block:IfPhotoPermaLinkSource}<div class="post_relative"><img class="notPhotoset" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></div>{block:IfPhotoPermaLinkSource}</a>{/block:IfPhotoPermaLinkSource}</div></div></div>
+{/block:Photo}
+
+{block:Photoset}
+<div class="post_text_perma" id="post-{PostID}"><div id="post_perma_inner"><div class="post_table_cell_perma_photoset"><div title="{block:ContentSource}Source: {SourceTitle}{/block:ContentSource}" class="post_relative type_photoset">{Photoset-500}</div></div></div></div>
+{/block:Photoset}
+
+{block:Text}
+<div class="post_text_perma not_audio" id="post-{PostID}"><div class="post_perma_inner"><div class="post_table_cell_perma">{block:Title}<div class="post_text_title_perma">{Title}</div>{/block:Title}<div id="post_text_body_perma" class="not_audio">{Body}</div></div></div></div>
+{/block:Text}
+
+{block:Quote}
+<div id="post_permalink"><div class="post" id="post-{PostID}"><div id="post_permalink_inner"><div class="post_relative"><div class="post_quote"><div class="post_quote_inner"><div class="post_quote_body">"{Quote}"</div>{block:Source}<div class="post_quote_source">{Source}</div>{/block:Source}</div></div></div></div></div></div>
+{/block:Quote}
+
+{block:Video}
+<div id="post_permalink"><div class="post type_video" id="post-{PostID}"><div id="post_permalink_inner"><div class="post_relative media">{Video-500}</div></div></div></div>
+{/block:Video}
+
+{/block:PermalinkPage}
+{/block:Posts}
+
+{block:PermalinkPage}
+{block:Posts}
+<div id="post_notes"><ol class="notes"><li class="notes_scroll_down">▼</li></ol><ol class="notes">{block:Caption}<li class="notes_headline"><span class="notes_headline_inner">{Caption}</span></li>{/block:Caption}{block:Artist}<li class="note">{block:TrackName}"{TrackName}"&nbsp;-&nbsp;{/block:TrackName}{block:Album}{Album} - {/block:Album}{Artist}</li>{/block:Artist}</ol><ol class="notes"><li class="notes_tag">{block:NoteCount}<span class="notes_tag_button">{NoteCountWithLabel}</span>{/block:NoteCount}{block:Date}<span class="notes_date_span">Timestamp: {DayOfWeek} {Year}/{MonthNumberWithZero}/{DayOfMonthWithZero} {24Hour}:{Minutes}:{Seconds}</span>{/block:Date}{block:RebloggedFrom}<span class="action"><a class="notes_tag_button type_source" href="{ReblogParentURL}">Via: {ReblogParentName}</a></span>{/block:RebloggedFrom}{block:ContentSource}<span class="action"><a class="notes_tag_button type_source" href="{SourceURL}" title="{SourceTitle}">Source: {SourceTitle}</a></span>{/block:ContentSource}{block:HasTags}{block:Tags}<span class="action notes_tag_title_case"><a class="notes_tag_button" href="{TagURL}">{Tag}</a></span>{/block:Tags}{/block:HasTags}</li></ol>{block:PostNotes}{PostNotes}{/block:PostNotes}<ol class="notes">
+<!-- To personalise the tweet share button add after the class attribute: data-via="YOUR_USER_NAME_WITHOUT_THE_@" data-hashtags="A_HASHTAG_WITHOUT_THE_#" --><li class="note perma_tweet">
+{block:IfTweetThis}<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>{/block:IfTweetThis}</li></ol><ol class="notes"><li class="notes_scroll_to_top">▲</li></ol></div>
+{/block:Posts}
+<div id="pagination_permalink"><a class="logo_permalink_page" href="/">← {Title}</a></div>
+
+{block:PermalinkPagination}
+{block:PreviousPost}<a href="{PreviousPost}" class="prev prev_table" title="{lang:Next post}"><span class="prev_cell">◀</span></a>{/block:PreviousPost}
+{block:NextPost}<a href="{NextPost}" class="next next_table" title="{lang:Next post}"><span class="next_cell">▶</span></a>{/block:NextPost}
+{/block:PermalinkPagination}
+{/block:PermalinkPage}
+</body>
+</html>
