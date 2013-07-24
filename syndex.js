@@ -335,7 +335,7 @@ IOS = navigator.platform == "iPad" || navigator.platform == "iPhone" || navigato
         }
         function j() {
             $("#post_permalink").css({
-                width: widthRef - 120,
+                width: widthRef -15,
                 height: heightRef - 64
             });
             $(".perma .post_relative img").css({
@@ -348,7 +348,6 @@ IOS = navigator.platform == "iPad" || navigator.platform == "iPhone" || navigato
                 "height": heightRef
             });
         }
-        
         c = false;
         d = false;
         heightRef = $(window).height();
@@ -417,11 +416,22 @@ IOS = navigator.platform == "iPad" || navigator.platform == "iPhone" || navigato
 		function getNextSlide(mySlide){
             nextSlidePost = mySlide.nextAll(".photopost").first();
             nextSlide = nextSlidePost.find(".notPhotoset").attr("src");	
-            console.log(nextSlidePost);
 		}
-        $(document).on("click", ".index.desktop .post_relative .notPhotoset, .perma .post_relative .notPhotoset",function() {
+        $(document).on("click", ".index.desktop .post_relative .notPhotoset",function() {
             initNextSlidePost = $(this).parent().parent().parent();
             getNextSlide(initNextSlidePost);
+            var b = $("#lightbox"), c = $(this).clone();
+            b.toggle();
+            b.animate({
+                opacity: "1"
+            }, 0);
+            b.find("#lightbox_image").append(c);
+            $("#lightbox_image img").css({
+                "max-width": widthRef,
+                "max-height": heightRef
+            });
+        });
+        $(document).on("click", ".perma .post_relative .notPhotoset",function() {
             var b = $("#lightbox"), c = $(this).clone();
             b.toggle();
             b.animate({
@@ -440,6 +450,14 @@ IOS = navigator.platform == "iPad" || navigator.platform == "iPhone" || navigato
             $(this).parent().toggle();
             $(this).parent().find("img").remove();
         });
+        $(document).on("click",".perma #lightbox_image .notPhotoset", function(){
+        	console.log("foo");
+            $(this).parent().parent().parent().parent().css({
+                opacity: "0"
+            });
+            $(this).parent().parent().parent().parent().toggle();
+            $(this).parent().parent().parent().parent().find("img").remove();
+        });
 		$("#lightbox_image").mouseup(function (e){
 			var container = $("#lightbox_image");
 			if (container.has(e.target).length === 0){
@@ -450,7 +468,7 @@ IOS = navigator.platform == "iPad" || navigator.platform == "iPhone" || navigato
 	            $(this).parent().parent().parent().find("img").remove();
 			}
 		});        
-		$(document).on("click","#lightbox_image .notPhotoset", function(){
+		$(document).on("click",".index #lightbox_image .notPhotoset", function(){
 				$(this).attr("src",nextSlide);
 				nextSlidePost.find(".post_relative").trigger("click");
 				getNextSlide(nextSlidePost)
