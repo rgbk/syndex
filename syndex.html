@@ -154,7 +154,7 @@
 <meta name="text:Tag shortcut 4" content=""/>
 <meta name="text:Tag shortcut 5" content=""/>
 <meta name="text:Description Button Text" content="About"/>
-
+<meta name="text:Google analytics ID" content="">
 
 
 <!-- FAVICON, RSS, EXTERNAL CSS -->
@@ -855,5 +855,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 {block:NextPost}<a href="{NextPost}" class="next next_table" title="{lang:Next post}"><span class="next_cell">▶</span></a>{/block:NextPost}
 {/block:PermalinkPagination}
 {/block:PermalinkPage}
+{block:IfGoogleAnalyticsID}
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '{text:Google Analytics ID}', 'tumblr.com');
+  ga('send', 'pageview');
+</script>    
+{/block:IfGoogleAnalyticsID}
 </body>
 </html>
